@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Default (Light) - Clean & Professional */
+    --bg-color: #f0f4f8;
+    --text-color: #202124;
+    --text-secondary: #5f6368;
+    --primary-color: #1a73e8;
+    --accent-color: #f9ab00;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --tab-active: #e8f0fe;
+}
+
+[data-theme='dark'] {
+    /* Dark Mode - Google Dark Theme */
+    --bg-color: #202124;
+    --text-color: #e8eaed;
+    --text-secondary: #9aa0a6;
+    --primary-color: #8ab4f8;
+    --accent-color: #fdb60d;
+    --card-bg: #2d2e31;
+    --border-color: #3c4043;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.4);
+    --tab-active: #303134;
+}
+
+[data-theme='contrast'] {
+    /* High Contrast - Accessibility First */
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --text-secondary: #ffff00; /* Yellow for secondary */
+    --primary-color: #00ffff; /* Cyan for links/primary */
+    --accent-color: #ff00ff; /* Magenta for alerts */
+    --card-bg: #000000;
+    --border-color: #ffffff;
+    --shadow-sm: none;
+    --shadow-md: 0 0 0 2px #ffffff; /* Hard border instead of shadow */
+    --tab-active: #000000; /* Distinct border handled in component */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Reference Layout Classes */
+.presentation-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.presentation-container {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Stretch to fill */
+    min-height: 0; /* Important for scroll */
+}
+/* Browser Tab Shape - Clean Rounded Look */
+.browser-tab {
+    position: relative;
+    transition: all 0.2s ease;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Remove the clip-path approach that hid borders */
+/* .browser-tab { clip-path: ... } */
+
+/* Logo filtering - Simplified as we now have SVG */
+/* We can still use brightness/invert for dark mode if the SVG is black */
+:root {
+   --logo-filter: none;
+}
+
+[data-theme='dark'] {
+   /* If SVG is black text, invert it to white for dark mode */
+   --logo-filter: invert(1) brightness(2); 
+}
+
+[data-theme='light'] {
+   --logo-filter: none;
+}
+
+[data-theme='contrast'] {
+   --logo-filter: invert(1) grayscale(1) contrast(2);
+}
+.main-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Card Styling - Exact Match to Reference but Dark */
+.feature-card {
+    background: var(--card-bg); /* Dark Card */
+    border-radius: 16px;
+    padding: 28px; /* Slightly reduced padding to prevent overflow */
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Allow growth */
+    min-height: min-content;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+    background: #35363a; /* Slightly lighter on hover */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    color: var(--text-color); /* White text title */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Custom Tweaks for React Integration */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: start; /* Prevent stretching to uniform height if content differs vastly, or keep stretch */
+}
+
+/* Scrollbar Dark Mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+}
+::-webkit-scrollbar-thumb {
+  background: #5f6368; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6; 
+}
+
+@media print {
+    .presentation-outer { padding: 0; }
+    .presentation-container { box-shadow: none; border: none; }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeWALK × Google Cloud Integration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <header class="main-header">
+            <div class="logos">
+                <img src="wewalk_logo_final.svg" alt="WeWALK Logo" class="logo-img">
+                <span class="separator">×</span>
+                <img src="google_cloud_logo.svg" alt="Google Cloud Logo" class="logo-img">
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <!-- Navigation -->
+            <div class="card feature-card">
+                <div class="card-header">
+                    <img src="icon_navigation.svg" alt="Navigation" class="card-icon">
+                    <h2>Multimodal Navigation</h2>
+                </div>
+                <div class="card-body">
+                    <p class="highlight">Tailored for Visually Impaired</p>
+                    <ul>
+                        <li>Step-by-step guidance using <strong>Google Maps & Places APIs</strong>.</li>
+                        <li><strong>Hands-free operation</strong>: Smart cane interaction keeps phone in pocket.</li>
+                        <li><strong>Planned:</strong> Enhanced safety with sidewalk, crosswalk, and obstacle detection.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Voice Assistant -->
+            <div class="card feature-card">
+                <div class="card-header">
+                    <img src="icon_assistant.svg" alt="Assistant" class="card-icon">
+                    <h2>Smart Voice Assistant</h2>
+                </div>
+                <div class="card-body">
+                    <p class="highlight">Transitioning to Vertex AI Agent Engine</p>
+                    <ul>
+                        <li>Currently utilizing <strong>DialogFlow</strong> for voice interactions.</li>
+                        <li>Moving to <strong>Gemini 2.5 Flash & Pro</strong> for next-gen conversational reasoning.</li>
+                        <li>Future: On-device models for offline voice experience on iOS/Android.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Computer Vision -->
+            <div class="card feature-card">
+                <div class="card-header">
+                    <img src="icon_ai.svg" alt="Vision" class="card-icon">
+                    <h2>Situational Awareness</h2>
+                </div>
+                <div class="card-body">
+                    <p class="highlight">Advanced Computer Vision</p>
+                    <ul>
+                        <li>Object finding, door detection, and room layout understanding.</li>
+                        <li>Powered by <strong>Gemma</strong> and other vision models.</li>
+                        <li>Solves the "last-mile" navigation problem.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Voice Generation -->
+            <div class="card feature-card">
+                <div class="card-header">
+                    <img src="icon_ai.svg" alt="Voice Gen" class="card-icon">
+                    <h2>Voice Generation</h2>
+                </div>
+                <div class="card-body">
+                    <p class="highlight">Natural Speech Output</p>
+                    <ul>
+                        <li>High-quality text-to-speech via <strong>Google TTS</strong>.</li>
+                        <li>Seamless online & offline operation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Analytics -->
+            <div class="card feature-card">
+                <div class="card-header">
+                    <img src="icon_analytics.svg" alt="Analytics" class="card-icon">
+                    <h2>Mobility Analytics</h2>
+                </div>
+                <div class="card-body">
+                    <p class="highlight">Under Development</p>
+                    <ul>
+                        <li>Actively developing metrics for cane angle, swipes, and obstacle interactions.</li>
+                        <li>Exploring <strong>Google Cloud services</strong> for advanced data processing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="card feature-card infra-card">
+                <div class="card-header">
+                    <div class="icon-group">
+                        <img src="icon_cloudrun.svg" alt="Cloud Run" class="card-icon">
+                        <img src="icon_cloudsql.svg" alt="Cloud SQL" class="card-icon">
+                    </div>
+                    <h2>Backend & Operations</h2>
+                </div>
+                <div class="card-body">
+                    <div class="tech-stack">
+                        <span class="tech-tag">Cloud Run</span>
+                        <span class="tech-tag">Cloud SQL</span>
+                        <span class="tech-tag">Firestore</span>
+                        <span class="tech-tag">Artifact Registry</span>
+                        <span class="tech-tag">Logging</span>
+                    </div>
+                    <p class="migration-note"><strong>Recently migrated from AWS to Google Cloud</strong>, leveraging GCP credits for scale and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
