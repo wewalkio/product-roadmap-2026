@@ -29,14 +29,14 @@ function AppContent() {
         <Slide title="2025: Achievements & Challenges">
           <Achievements2025 />
         </Slide>
-        <Slide title="2025 Roadmap Details (Backup)">
-          <Overview />
-        </Slide>
         <Slide title="2026 Focus: Removing Barriers">
           <Focus2026 />
         </Slide>
         <Slide title="What's Next">
           <WhatsNext />
+        </Slide>
+        <Slide title="2025 Roadmap Details (Backup)">
+          <Overview />
         </Slide>
       </RevealPresentation>
     </MuiThemeProvider>

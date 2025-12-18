@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Paper, Chip } from '@mui/material';
-import { Map, Target, Users, Sparkles } from 'lucide-react';
+import { Map, Target, Users, Sparkles, Glasses } from 'lucide-react';
 
 export const WhatsNext: React.FC = () => {
   const initiatives = [
@@ -52,6 +52,18 @@ export const WhatsNext: React.FC = () => {
         'Advanced obstacle detection',
         'Modular design architecture',
         'Enhanced battery life (48h target)',
+      ],
+    },
+    {
+      icon: Glasses,
+      title: 'SAWNS Project',
+      timeline: 'Future Innovation',
+      color: 'info',
+      items: [
+        'Situational Awareness Wearable',
+        'Head-mounted navigation system',
+        'Hands-free environment perception',
+        'Advanced computer vision integration',
       ],
     },
   ];
