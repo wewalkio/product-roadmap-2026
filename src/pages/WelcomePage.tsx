@@ -24,10 +24,13 @@ export const WelcomePage: React.FC = () => {
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            mb: 2,
+            mb: 1,
+            lineHeight: 1.1,
           }}
         >
           WeWALK
+          <br />
+          Product & Innovation
         </Typography>
         <Typography
           variant="h2"
@@ -36,9 +39,10 @@ export const WelcomePage: React.FC = () => {
             fontWeight: 600,
             color: 'text.primary',
             mb: 1,
+            mt: 2,
           }}
         >
-          Product Roadmap 2026
+          Q4 2025 Presentation
         </Typography>
         <Typography
           variant="h5"
@@ -48,7 +52,7 @@ export const WelcomePage: React.FC = () => {
             color: 'text.secondary',
           }}
         >
-          Building the Future of Accessible Navigation
+          18.12.2025
         </Typography>
       </Box>
 
