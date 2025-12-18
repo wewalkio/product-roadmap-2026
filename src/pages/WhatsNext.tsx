@@ -42,6 +42,18 @@ export const WhatsNext: React.FC = () => {
       ],
     },
     {
+      icon: Glasses,
+      title: 'SAWNS Project',
+      timeline: 'BMC and Tubitak Grants',
+      color: 'info',
+      items: [
+        'Situational Awareness Wearable',
+        'Head-mounted navigation system',
+        'Hands-free environment perception',
+        'Advanced computer vision integration',
+      ],
+    },
+    {
       icon: Sparkles,
       title: 'WeWALK Smart Cane V3',
       timeline: 'CES 2027 Launch',
@@ -52,18 +64,6 @@ export const WhatsNext: React.FC = () => {
         'Advanced obstacle detection',
         'Modular design architecture',
         'Enhanced battery life (48h target)',
-      ],
-    },
-    {
-      icon: Glasses,
-      title: 'SAWNS Project',
-      timeline: 'Future Innovation',
-      color: 'info',
-      items: [
-        'Situational Awareness Wearable',
-        'Head-mounted navigation system',
-        'Hands-free environment perception',
-        'Advanced computer vision integration',
       ],
     },
   ];
